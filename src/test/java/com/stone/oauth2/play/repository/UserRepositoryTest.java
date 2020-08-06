@@ -1,7 +1,7 @@
 package com.stone.oauth2.play.repository;
 
-import com.stone.oauth2.play.user.domain.User;
-import com.stone.oauth2.play.user.repository.UserRepository;
+import com.stone.oauth2.play.auth.domain.User;
+import com.stone.oauth2.play.auth.repository.UserRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

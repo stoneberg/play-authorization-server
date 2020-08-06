@@ -1,7 +1,7 @@
-package com.stone.oauth2.play.user.service;
+package com.stone.oauth2.play.auth.service;
 
-import com.stone.oauth2.play.user.domain.User;
-import com.stone.oauth2.play.user.repository.UserRepository;
+import com.stone.oauth2.play.auth.domain.User;
+import com.stone.oauth2.play.auth.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AccountStatusUserDetailsChecker;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -54,10 +54,6 @@
             <appender-ref ref="STDOUT" />
         </logger>
 
-        <logger name="org.springframework.jdbc" level="ERROR" additivity="false">
-            <appender-ref ref="STDOUT" />
-        </logger>
-
         <logger name="org.springframework.orm.jpa" level="trace" additivity="false">
             <appender-ref ref="STDOUT" />
         </logger>
@@ -84,10 +80,6 @@
         </logger>
 
         <logger name="jdbc.resultsettable" level="INFO" additivity="false">
-            <appender-ref ref="STDOUT" />
-        </logger>
-
-        <logger name="org.apache.ibatis" level="ERROR" additivity="false">
             <appender-ref ref="STDOUT" />
         </logger>
 

@@ -1,6 +1,6 @@
-package com.stone.oauth2.play.user.repository;
+package com.stone.oauth2.play.auth.repository;
 
-import com.stone.oauth2.play.user.domain.User;
+import com.stone.oauth2.play.auth.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.stone.oauth2.play.user.domain;
+package com.stone.oauth2.play.auth.domain;
 
 import lombok.Getter;
 import lombok.Setter;

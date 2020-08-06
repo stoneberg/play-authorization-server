@@ -1,7 +1,7 @@
 package com.stone.oauth2.play.config.security;
 
-import com.stone.oauth2.play.user.domain.User;
-import com.stone.oauth2.play.user.repository.UserRepository;
+import com.stone.oauth2.play.auth.domain.User;
+import com.stone.oauth2.play.auth.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,7 +1,7 @@
-package com.stone.oauth2.play.user.controller;
+package com.stone.oauth2.play.auth.controller;
 
 import com.google.gson.Gson;
-import com.stone.oauth2.play.user.domain.OAuthToken;
+import com.stone.oauth2.play.auth.domain.OAuthToken;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.*;
