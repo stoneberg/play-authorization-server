@@ -1,5 +1,6 @@
 package com.stone.oauth2.play.encoding;
 
+import org.apache.commons.codec.binary.Base64;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,8 +18,16 @@ public class EncodingTest {
     private PasswordEncoder passwordEncoder;
 
     @Test
-    public void encodeTest() {
+    public void passwordEncodeTest() {
         log.info("@testSecret encoding==>{}", passwordEncoder.encode("testSecret"));
         log.info("@password encoding====>{}", passwordEncoder.encode("new1234@"));
     }
+
+    @Test
+    public void base64EncodeTest() {
+        String credentials = "testClientId:testSecret";
+        String encodedCredentials = new String(Base64.encodeBase64(credentials.getBytes()));
+        log.info("@encodedCredentials encoding====>{}", encodedCredentials);
+    }
+
 }

@@ -13,7 +13,7 @@ spring:
       maximum-pool-size: 5
 
   jpa:
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate.default_batch_fetch_size: 500

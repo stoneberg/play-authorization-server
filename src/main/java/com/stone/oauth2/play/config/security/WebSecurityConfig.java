@@ -21,11 +21,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity security) throws Exception {
         security
                 .csrf().disable()
-                .headers().frameOptions().disable()
-                .and()
-                .authorizeRequests().antMatchers("/oauth/**", "/oauth/token", "/oauth2/**").permitAll()
+                .authorizeRequests().antMatchers( "/oauth/token").permitAll()
                 .and()
                 .formLogin().and()
                 .httpBasic();
     }
+
 }
