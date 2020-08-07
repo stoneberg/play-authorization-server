@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -32,9 +33,11 @@ public class AuthorizationServerSecurityConfig extends AuthorizationServerConfig
     private final PasswordEncoder passwordEncoder;
     private final DataSource dataSource;
     private final CustomUserDetailService userDetailService;
+    private final AuthenticationManager authenticationManager;
 
     @Value("${security.oauth2.jwt.signkey}")
     private String signKey;
+
 
     /**
      * 리소스 서버에서 토큰 검증 요청을 인증 서버로 보낼 때 /oauth/check_token 호출 처리
@@ -68,6 +71,7 @@ public class AuthorizationServerSecurityConfig extends AuthorizationServerConfig
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         super.configure(endpoints);
+        endpoints.authenticationManager(authenticationManager);
         endpoints.accessTokenConverter(jwtAccessTokenConverter()).userDetailsService(userDetailService);
     }
 
